@@ -29,6 +29,12 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    task wrapper(type: Wrapper) {
+        gradleVersion = '7.0'
+    }
+    task prepareKotlinBuildScriptModel {
+
+    }
 }
 
 dependencies {
