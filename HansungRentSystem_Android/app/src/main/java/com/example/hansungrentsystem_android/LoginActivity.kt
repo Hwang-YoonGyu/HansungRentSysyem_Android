@@ -25,7 +25,7 @@ class LoginActivity : AppCompatActivity() {
         loginBtn.setOnClickListener {
             thread(start = true) {
                 try {
-                    var urlText = "http://10.0.2.2:8080/API/login?userId="+idField.text+"&password="+pwdField.text
+                    var urlText = "http://223.194.158.173:8080/API/login?userId="+idField.text+"&password="+pwdField.text
 
                     val url = URL(urlText)
                     val netConn = url.openConnection() as HttpURLConnection
