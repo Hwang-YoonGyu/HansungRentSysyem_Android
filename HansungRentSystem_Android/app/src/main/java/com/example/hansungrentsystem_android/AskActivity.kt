@@ -1,4 +1,16 @@
 package com.example.hansungrentsystem_android
 
-class AskActivity {
+import android.os.Bundle
+
+import androidx.appcompat.app.AppCompatActivity
+
+
+class AskActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_ask)
+
+
+
+    }
 }
