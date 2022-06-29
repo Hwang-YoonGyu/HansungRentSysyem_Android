@@ -1,5 +1,6 @@
 package com.example.hansungrentsystem_android
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -48,12 +49,13 @@ class LoginActivity : AppCompatActivity() {
                         val json = JSONObject(content.toString())
                         val pwd =json["password"].toString()
                         System.out.println(pwd);
-
+                        val intent = Intent(this, MainActivity::class.java)
+                        startActivity(intent)
                     }
 
                 } catch (e: Exception) {
                     System.out.println("로그인실패@@@@@@@@@@@@@@@@@@@@@@");
-
+                    System.out.println(e.toString());
                 }
 
             }
