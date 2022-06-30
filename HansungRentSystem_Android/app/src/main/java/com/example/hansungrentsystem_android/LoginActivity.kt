@@ -10,6 +10,7 @@ import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.lang.Exception
 import java.lang.StringBuilder
+import java.lang.reflect.Type
 import java.net.HttpURLConnection
 import java.net.URL
 import kotlin.concurrent.thread
@@ -22,6 +23,9 @@ class LoginActivity : AppCompatActivity() {
         val loginBtn = findViewById<Button>(R.id.loginBtn)
         val idField = findViewById<EditText>(R.id.idField)
         val pwdField = findViewById<EditText>(R.id.pwdField)
+
+
+
 
         loginBtn.setOnClickListener {
             thread(start = true) {
@@ -48,8 +52,16 @@ class LoginActivity : AppCompatActivity() {
 
                         val json = JSONObject(content.toString())
                         val pwd =json["password"].toString()
-                        System.out.println(pwd);
+                        var user = User.getInstance(this)
+                        user.setData(userId = json["id"].toString(), userName = json["userName"].toString(),Type= json["Type"].toString(), password = json["password"].toString(), userPhone = json["userPhone"].toString(), isRented = json["isRented"].toString())
+
+
+
+
                         val intent = Intent(this, MainActivity::class.java)
+                        intent.putExtra("userId",user.userId)
+
+
                         startActivity(intent)
                     }
 
