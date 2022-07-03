@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/Ask_backBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
@@ -30,7 +30,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/Ask_backBtn" />
 
     <TextView
         android:id="@+id/textView5"
@@ -100,7 +100,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/Ask_lg"
         android:layout_width="130dp"
         android:layout_height="55dp"
         android:layout_marginTop="40dp"
@@ -114,7 +114,7 @@
         tools:ignore="TextContrastCheck" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/Ask_samsung"
         android:layout_width="130dp"
         android:layout_height="55dp"
         android:layout_marginStart="50dp"

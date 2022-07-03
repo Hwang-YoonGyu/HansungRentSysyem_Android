@@ -7,7 +7,7 @@
     android:backgroundTint="#d5e7fc">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/Ask_backBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -46,7 +46,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/Ask_samsung"
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_marginTop="30dp"
@@ -59,7 +59,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/Ask_lg"
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_marginTop="15dp"
@@ -68,10 +68,10 @@
         android:textColor="#5093f8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button7" />
+        app:layout_constraintTop_toBottomOf="@+id/Ask_samsung" />
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/Ask_msi"
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_marginTop="15dp"
@@ -80,10 +80,10 @@
         android:textColor="#d5e7fc"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button8" />
+        app:layout_constraintTop_toBottomOf="@+id/Ask_lg" />
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/Ask_apple"
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_marginTop="15dp"
@@ -92,5 +92,5 @@
         android:textColor="#5093f8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button9" />
+        app:layout_constraintTop_toBottomOf="@+id/Ask_msi" />
 </androidx.constraintlayout.widget.ConstraintLayout>
