@@ -30,7 +30,7 @@
         app:srcCompat="@drawable/hansung2" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/detail_rentDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -45,7 +45,7 @@
         tools:ignore="TextContrastCheck" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/detail_returnDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -55,7 +55,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/detail_rentDate" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="400dp"
@@ -74,6 +74,7 @@
             android:background="#d4e6fd"
             android:text="마이페이지"
             android:textColor="#5899f7"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/viewBtn"
             app:layout_constraintTop_toTopOf="parent"
@@ -85,7 +86,8 @@
             android:layout_height="200dp"
             android:background="#3478f6"
             android:text="기자재 목록 조회"
-            android:textColor="#9bc4fa"
+            android:textColor="@color/white"
+            android:textStyle="normal"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="TextContrastCheck" />
@@ -97,6 +99,7 @@
             android:background="#d4e6fd"
             android:text="공지사항"
             android:textColor="#5899f7"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="TextContrastCheck" />
@@ -106,8 +109,8 @@
             android:layout_width="0dp"
             android:layout_height="200dp"
             android:background="#3478f6"
-            android:text="앱 종료"
-            android:textColor="#9bc4fa"
+            android:text="로그아웃"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/button5"

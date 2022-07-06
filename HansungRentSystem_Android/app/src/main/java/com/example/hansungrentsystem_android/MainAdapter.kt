@@ -25,6 +25,7 @@ class MainAdapter(private val items: ArrayList<ObjectLaptop>): RecyclerView.Adap
             view.button.isEnabled = item.enable
             view.button.setBackgroundColor(item.color)
             view.button.setTextColor((item.textColor))
+            view.button.setOnClickListener(listener)
 
         }
     }
@@ -41,7 +42,7 @@ class MainAdapter(private val items: ArrayList<ObjectLaptop>): RecyclerView.Adap
         val listener = View.OnClickListener { it ->
             val intent = Intent(holder.itemView.context, DetailActivity::class.java)
 
-            intent.putExtra("name", item)
+            intent.putExtra("obj", item)
             startActivity(holder.itemView.context, intent, null)
         }
         holder.apply {
