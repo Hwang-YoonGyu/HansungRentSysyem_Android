@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_rent.*
@@ -28,5 +29,10 @@ class RentActivity : AppCompatActivity() {
         val layoutManager = LinearLayoutManager(this)
         recyclerview.layoutManager = layoutManager
         recyclerview.adapter = adapter
+
+        val back = findViewById<TextView>(R.id.rent_backBtn)
+        back.setOnClickListener {
+            onBackPressed()
+        }
     }
 }

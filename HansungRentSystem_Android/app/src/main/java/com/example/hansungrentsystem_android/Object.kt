@@ -1,5 +1,6 @@
 package com.example.hansungrentsystem_android
 
+import android.graphics.Color
 import java.io.Serializable
 
 class ObjectLaptop public constructor() : Serializable {
@@ -11,6 +12,8 @@ class ObjectLaptop public constructor() : Serializable {
     var rentDate : String = ""
     var returnDate : String = ""
     var enable : Boolean = false
+    var color : Int = Color.parseColor("#3378f7")
+    var textColor : Int = Color.parseColor("#3378f7")
     public fun setData(code : String, name : String, status: String, userId : String, userPhone : String, rentDate :String, returnDate : String, enable : Boolean) {
         this.code = code
         this.name = name

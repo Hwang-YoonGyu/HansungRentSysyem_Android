@@ -23,8 +23,8 @@ class MainAdapter(private val items: ArrayList<ObjectLaptop>): RecyclerView.Adap
             view.code.text = item.code
             view.button.text = item.status
             view.button.isEnabled = item.enable
-
-
+            view.button.setBackgroundColor(item.color)
+            view.button.setTextColor((item.textColor))
 
         }
     }

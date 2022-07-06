@@ -1,6 +1,7 @@
 package com.example.hansungrentsystem_android
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -87,7 +88,11 @@ class AskActivity : AppCompatActivity() {
                                 rentDate = obj["rentDate"].toString(),
                                 returnDate = obj["returnDate"].toString(),
                                 enable = true
+
                             )
+                            temp.color = Color.parseColor("#3378f7")
+                            temp.textColor = Color.parseColor("#ffffff")
+
                         }
                         else {
                             temp.setData(
@@ -100,6 +105,8 @@ class AskActivity : AppCompatActivity() {
                                 returnDate = obj["returnDate"].toString(),
                                 enable = false
                             )
+                            temp.color = Color.parseColor("#d4e7fd")
+                            temp.textColor = Color.parseColor("#5093f8")
                         }
                             list.add(temp)
 
