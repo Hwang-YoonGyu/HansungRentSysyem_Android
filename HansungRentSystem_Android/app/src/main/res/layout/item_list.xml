@@ -19,6 +19,8 @@
             android:layout_marginBottom="5dp"
             android:text="name"
             android:textColor="#090908"
+            android:maxLines="1"
+            android:ellipsize="end"
             android:textSize="14sp" />
 
         <TextView
@@ -26,6 +28,7 @@
             android:layout_width="152dp"
             android:layout_height="wrap_content"
             android:text="code"
+            android:textAlignment="center"
             android:textColor="#090908"
             android:textSize="14sp" />
 
