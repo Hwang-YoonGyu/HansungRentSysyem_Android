@@ -71,12 +71,18 @@ class AskActivity : AppCompatActivity() {
                     val json = JSONObject(content.toString())
                     val data = json.getJSONArray("Data")
 
-                    val obj = data.getJSONObject(0)
+                    val list = ArrayList<ObjectLaptop>()
 
+                    for (i : Int in 0..data.length()-1) {
+                        val obj = data.getJSONObject(i)
+                        var temp = ObjectLaptop()
+                        temp.setData(code = obj["code"].toString(), name = obj["name"].toString(),status = obj["status"].toString(), userId = obj["userId"].toString(),userPhone = obj["userPhone"].toString(), rentDate = obj["rentDate"].toString(), returnDate = obj["returnDate"].toString())
+                        list.add(temp)
 
-                    val s = obj["code"].toString()
-                    System.out.println(s)
-
+                    }
+                    val intent = Intent(this, RentActivity::class.java)
+                    intent.putExtra("list", list)
+                    startActivity(intent)
 
                 }
 

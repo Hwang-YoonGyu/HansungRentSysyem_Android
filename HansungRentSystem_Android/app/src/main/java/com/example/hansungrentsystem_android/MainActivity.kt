@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_rent)
+        setContentView(R.layout.activity_main)
 
         System.out.println("메인에서 유저의 이름은 : "+user?.userName)
 

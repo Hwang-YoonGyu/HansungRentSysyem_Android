@@ -18,10 +18,14 @@ import java.net.URL
 import kotlin.concurrent.thread
 
 class RentActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rent)
+        val listlk = intent.getSerializableExtra("list") as ArrayList<ObjectLaptop>
 
+
+        System.out.println(listlk.get(10).code)
         val list = ArrayList<MainData>()
         list.add(MainData("자바", "010-0000-0000"))
         list.add(MainData("안드로이드", "011-1111-1111"))
