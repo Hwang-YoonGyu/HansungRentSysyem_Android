@@ -76,13 +76,38 @@ class AskActivity : AppCompatActivity() {
                     for (i : Int in 0..data.length()-1) {
                         val obj = data.getJSONObject(i)
                         var temp = ObjectLaptop()
-                        temp.setData(code = obj["code"].toString(), name = obj["name"].toString(),status = obj["status"].toString(), userId = obj["userId"].toString(),userPhone = obj["userPhone"].toString(), rentDate = obj["rentDate"].toString(), returnDate = obj["returnDate"].toString())
-                        list.add(temp)
+
+                        if (obj["status"].toString()=="대여가능") {
+                            temp.setData(
+                                code = obj["code"].toString(),
+                                name = obj["name"].toString(),
+                                status = "대여",
+                                userId = obj["userId"].toString(),
+                                userPhone = obj["userPhone"].toString(),
+                                rentDate = obj["rentDate"].toString(),
+                                returnDate = obj["returnDate"].toString(),
+                                enable = true
+                            )
+                        }
+                        else {
+                            temp.setData(
+                                code = obj["code"].toString(),
+                                name = obj["name"].toString(),
+                                status = "불가",
+                                userId = obj["userId"].toString(),
+                                userPhone = obj["userPhone"].toString(),
+                                rentDate = obj["rentDate"].toString(),
+                                returnDate = obj["returnDate"].toString(),
+                                enable = false
+                            )
+                        }
+                            list.add(temp)
 
                     }
                     val intent = Intent(this, RentActivity::class.java)
                     intent.putExtra("list", list)
                     startActivity(intent)
+
 
                 }
 

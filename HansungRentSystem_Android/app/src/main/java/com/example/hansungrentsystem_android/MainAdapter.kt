@@ -1,22 +1,31 @@
 package com.example.hansungrentsystem_android
 
+import android.content.Context
+import android.content.Intent
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.item_list.view.*
 
-class MainAdapter(private val items: ArrayList<MainData>): RecyclerView.Adapter<MainAdapter.MainViewHolder>()
+class MainAdapter(private val items: ArrayList<ObjectLaptop>): RecyclerView.Adapter<MainAdapter.MainViewHolder>()
 {
     class MainViewHolder(v: View): RecyclerView.ViewHolder(v)
     {
         private var view: View = v
-        fun bind(listener: View.OnClickListener, item:MainData)
+        fun bind(listener: View.OnClickListener, item:ObjectLaptop)
         {
             view.name.text = item.name
-            view.number.text = item.number
-            view.setOnClickListener(listener)
+            view.code.text = item.code
+            view.button.text = item.status
+            view.button.isEnabled = item.enable
+
+
+
         }
     }
 
@@ -30,7 +39,10 @@ class MainAdapter(private val items: ArrayList<MainData>): RecyclerView.Adapter<
     {
         val item = items[position]
         val listener = View.OnClickListener { it ->
-            Toast.makeText(it.context, "클릭한 아이템의 이름 : ${item.name}", Toast.LENGTH_SHORT).show()
+            val intent = Intent(holder.itemView.context, DetailActivity::class.java)
+
+            intent.putExtra("name", item)
+            startActivity(holder.itemView.context, intent, null)
         }
         holder.apply {
             bind(listener, item)

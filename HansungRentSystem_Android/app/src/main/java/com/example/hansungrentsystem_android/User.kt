@@ -11,6 +11,7 @@ class User private constructor() {
     var password : String = ""
     var userPhone : String = ""
     var isRented : String = ""
+
     // 파라메터를 받는 싱글톤 클래스를 만들려면 companion object를 이용한다.
     companion object {
         private var instance: User? = null

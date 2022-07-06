@@ -10,7 +10,8 @@ class ObjectLaptop public constructor() : Serializable {
     var userPhone : String = ""
     var rentDate : String = ""
     var returnDate : String = ""
-    public fun setData(code : String, name : String, status: String, userId : String, userPhone : String, rentDate :String, returnDate : String) {
+    var enable : Boolean = false
+    public fun setData(code : String, name : String, status: String, userId : String, userPhone : String, rentDate :String, returnDate : String, enable : Boolean) {
         this.code = code
         this.name = name
         this.status = status
@@ -18,6 +19,7 @@ class ObjectLaptop public constructor() : Serializable {
         this.userPhone = userPhone
         this.rentDate = rentDate
         this.returnDate = returnDate
+        this.enable = enable
     }
 
 }
