@@ -73,6 +73,7 @@ class AskActivity : AppCompatActivity() {
 
                     val obj = data.getJSONObject(0)
 
+
                     val s = obj["code"].toString()
                     System.out.println(s)
 
