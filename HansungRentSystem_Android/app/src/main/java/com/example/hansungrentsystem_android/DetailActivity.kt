@@ -13,7 +13,7 @@ class DetailActivity : AppCompatActivity() {
         setContentView(R.layout.activity_detail)
 
 
-        //var obj = intent.getSerializableExtra("obj") as ObjectLaptop
+        var obj = intent.getSerializableExtra("obj") as ObjectLaptop
         //var obj = intent.getStringExtra("obj")
         val user = User.getInstance(this)
         val name = findViewById<TextView>(R.id.detail_name)
@@ -26,8 +26,8 @@ class DetailActivity : AppCompatActivity() {
         val cancelBtn = findViewById<Button>(R.id.detail_cancelBtn)
 
 
-//        name.text = obj.name
-//        code.text = obj.code
+        name.text = obj.name
+        code.text = obj.code
 
         rentDate.text = LocalDate.now().toString()
         returnDate.text = LocalDate.now().plusDays(30).toString()

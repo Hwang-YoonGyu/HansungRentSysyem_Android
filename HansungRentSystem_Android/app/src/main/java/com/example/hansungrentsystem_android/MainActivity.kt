@@ -28,8 +28,7 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
             }
             terminateBtn.setOnClickListener{
-                val intent = Intent(this,LoginActivity::class.java)
-                startActivity(intent)
+                onBackPressed()
             }
 
         }
