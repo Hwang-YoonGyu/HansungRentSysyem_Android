@@ -20,6 +20,20 @@
         app:layout_constraintTop_toBottomOf="@+id/detail_name" />
 
     <TextView
+        android:id="@+id/detail_name"
+        android:layout_height="60dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="100dp"
+        android:text="MacBook Pro"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/detail_rentDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -85,20 +99,6 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/detail_userName" />
-
-    <TextView
-        android:id="@+id/detail_name"
-        android:layout_height="60dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="100dp"
-        android:text="MacBook Pro"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="18dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/detail_rentBtn"
