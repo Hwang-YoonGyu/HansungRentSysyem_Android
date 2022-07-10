@@ -47,7 +47,6 @@ class RentActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
         adapter?.notifyDataSetChanged()
     }
     
@@ -56,7 +55,7 @@ class RentActivity : AppCompatActivity() {
         setContentView(R.layout.activity_rent)
         list = intent.getSerializableExtra("list") as ArrayList<ObjectLaptop>
 
-        val adapter = MainAdapter(list)
+        adapter = MainAdapter(list)
         val layoutManager = LinearLayoutManager(this)
         recyclerview.layoutManager = layoutManager
         recyclerview.adapter = adapter

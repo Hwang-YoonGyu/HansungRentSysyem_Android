@@ -16,9 +16,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        System.out.println("메인에서 유저의 이름은 : "+user?.userName)
-
-
         val viewBtn = findViewById<Button>(R.id.viewBtn)
         val terminateBtn = findViewById<Button>(R.id.terminateBtn)
         var userInfo = findViewById<TextView>(R.id.userInfo)

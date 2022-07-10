@@ -1,5 +1,7 @@
 package com.example.hansungrentsystem_android
 
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
@@ -119,8 +121,14 @@ class AskActivity : AppCompatActivity() {
                 }
 
             } catch (e: Exception) {
-                System.out.println("리스트 json화 실패");
-                System.out.println(e.toString());
+                this.runOnUiThread {
+                    System.out.println("오류 : "+e.toString());
+                    val builder = AlertDialog.Builder(this)
+                    builder.setTitle("").setMessage("API서버 오류입니다. 잠시 후에 다시 시도해 주세요.").setPositiveButton("확인", { _: DialogInterface, i:Int ->
+                    })
+                    val alertDialog: AlertDialog = builder.create()
+                    alertDialog.show()
+                }
             }
 
         }

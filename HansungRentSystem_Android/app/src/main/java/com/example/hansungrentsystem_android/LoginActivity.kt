@@ -1,5 +1,7 @@
 package com.example.hansungrentsystem_android
 
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -28,6 +30,9 @@ class LoginActivity : AppCompatActivity() {
 
 
         loginBtn.setOnClickListener {
+            this.runOnUiThread {
+
+            }
             thread(start = true) {
                 try {
                     var urlText = "http://10.0.2.2:8080/API/login?userId="+idField.text+"&password="+pwdField.text
@@ -66,8 +71,15 @@ class LoginActivity : AppCompatActivity() {
                     }
 
                 } catch (e: Exception) {
-                    System.out.println("로그인실패@@@@@@@@@@@@@@@@@@@@@@");
-                    System.out.println(e.toString());
+                    this.runOnUiThread {
+                        System.out.println("오류 : "+e.toString());
+                        val builder = AlertDialog.Builder(this)
+                        builder.setTitle("").setMessage("입력하신 정보가 올바르지 않습니다.").setPositiveButton("확인", { _: DialogInterface, i:Int ->
+                        })
+                        val alertDialog: AlertDialog = builder.create()
+                        alertDialog.show()
+                    }
+
                 }
 
             }
