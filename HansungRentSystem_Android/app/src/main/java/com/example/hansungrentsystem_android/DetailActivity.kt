@@ -1,13 +1,25 @@
 package com.example.hansungrentsystem_android
 
+import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import org.json.JSONObject
+import java.io.BufferedReader
+import java.io.InputStreamReader
+import java.lang.Exception
+import java.lang.StringBuilder
+import java.net.HttpURLConnection
+import java.net.URL
 import java.time.LocalDate
+import kotlin.concurrent.thread
 
 class DetailActivity : AppCompatActivity() {
+    private val rentActivity = RentActivity.getInstance()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
@@ -35,6 +47,53 @@ class DetailActivity : AppCompatActivity() {
         userName.text = user.userName
 
         rentBtn.setOnClickListener {
+//            thread(start = true) {
+//                try {
+//                    var urlText =
+//                        "http://10.0.2.2:8080/API/Rent?code="+obj.code+
+//                                "&userId="+user.userId+
+//                                "&userPhone="+user.userPhone+
+//                                "&rentDate="+rentDate.text+
+//                                "&returnDate="+returnDate.text
+//
+//                    val url = URL(urlText)
+//                    val netConn = url.openConnection() as HttpURLConnection
+//
+//                    if (netConn.responseCode == HttpURLConnection.HTTP_OK) {
+//                        val streamReader = InputStreamReader(netConn.inputStream)
+//                        val buffered = BufferedReader(streamReader)
+//
+//                        val content = StringBuilder()
+//                        while (true) {
+//                            val line = buffered.readLine() ?: break
+//                            content.append(line)
+//                        }
+//                        buffered.close()
+//                        netConn.disconnect()
+//
+//                        val json = JSONObject(content.toString())
+//                        val result =json["result"].toString()
+//
+//
+//                        if (result.equals("1")) {
+//
+//                        }
+//                        else if (result.equals("0")) {
+//
+//                        }
+//
+//
+//                    }
+//
+//                } catch (e: Exception) {
+//                    System.out.println("오류");
+//                    System.out.println(e.toString());
+//                }
+//
+//            }
+            rentActivity?.changeMethod(obj.code)
+            onBackPressed()
+
 
         }
         cancelBtn.setOnClickListener {
