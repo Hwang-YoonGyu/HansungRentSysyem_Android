@@ -1,13 +1,9 @@
 package com.example.hansungrentsystem_android
 
-import android.content.Context
 import android.content.Intent
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.core.content.ContextCompat
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.item_list.view.*
@@ -19,14 +15,13 @@ class MainAdapter(private val items: ArrayList<ObjectLaptop>): RecyclerView.Adap
         private var view: View = v
         fun bind(listener: View.OnClickListener, item:ObjectLaptop)
         {
-            view.name.text = item.name
-            view.code.text = item.code
+            view.code.text = item.name
+            view.rentDate.text = item.code
             view.button.text = item.status
             view.button.isEnabled = item.enable
             view.button.setBackgroundColor(item.color)
             view.button.setTextColor((item.textColor))
             view.button.setOnClickListener(listener)
-
         }
     }
 

@@ -53,7 +53,7 @@ class AskActivity : AppCompatActivity() {
         thread(start = true) {
             try {
                 var urlText =
-                    "http://10.0.2.2:8080/API/show?brand=" + brand
+                    "http://223.194.158.173:8080/API/show?brand=" + brand
 
                 val url = URL(urlText)
                 val netConn = url.openConnection() as HttpURLConnection

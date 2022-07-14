@@ -13,31 +13,29 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/name"
-            android:layout_width="138dp"
+            android:id="@+id/code"
+            android:layout_width="135dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
-            android:text="name"
-            android:textColor="#090908"
-            android:maxLines="1"
             android:ellipsize="end"
+            android:maxLines="1"
+            android:text="code"
+            android:textColor="#090908"
             android:textSize="14sp" />
 
         <TextView
-            android:id="@+id/code"
-            android:layout_width="152dp"
+            android:id="@+id/rentDate"
+            android:layout_width="135dp"
             android:layout_height="wrap_content"
-            android:text="code"
-            android:textAlignment="center"
+            android:text="rentDate"
             android:textColor="#090908"
             android:textSize="14sp" />
 
         <TextView
             android:id="@+id/returnDate"
-            android:layout_width="152dp"
+            android:layout_width="135dp"
             android:layout_height="wrap_content"
             android:text="returnDate"
-            android:textAlignment="center"
             android:textColor="#090908"
             android:textSize="14sp" />
 
