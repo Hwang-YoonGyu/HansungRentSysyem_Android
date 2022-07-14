@@ -5,10 +5,8 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_rent.*
-import kotlin.concurrent.thread
 
 class LogActivity : AppCompatActivity() {
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,7 +18,7 @@ class LogActivity : AppCompatActivity() {
         recyclerview.layoutManager = layoutManager
         recyclerview.adapter = adapter
 
-        val back = findViewById<TextView>(R.id.textView2)
+        val back = findViewById<TextView>(R.id.Log_backBtn)
         back.setOnClickListener {
             onBackPressed()
         }
