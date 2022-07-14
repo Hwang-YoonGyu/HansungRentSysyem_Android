@@ -20,7 +20,7 @@ class LogAdapter(private val items: ArrayList<Log>): RecyclerView.Adapter<LogAda
         {
             view.code.text = item.code
             view.rentDate.text = item.rentDate
-            view.returnDate.text = item.returnDate
+            view.returnDate.text = "~"+item.returnDate
         }
     }
 

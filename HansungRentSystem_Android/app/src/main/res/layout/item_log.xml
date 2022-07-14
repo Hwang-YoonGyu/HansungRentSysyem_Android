@@ -28,6 +28,7 @@
             android:layout_width="135dp"
             android:layout_height="wrap_content"
             android:text="rentDate"
+            android:textAlignment="center"
             android:textColor="#090908"
             android:textSize="14sp" />
 
@@ -36,6 +37,7 @@
             android:layout_width="135dp"
             android:layout_height="wrap_content"
             android:text="returnDate"
+            android:textAlignment="center"
             android:textColor="#090908"
             android:textSize="14sp" />
 
