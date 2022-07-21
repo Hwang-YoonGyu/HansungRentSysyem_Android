@@ -27,21 +27,19 @@ class LoginActivity : AppCompatActivity() {
         val pwdField = findViewById<EditText>(R.id.pwdField)
 
         try {
-            var filePath = filesDir.path + "/myText.txt"
-
+            var filePath = filesDir.path + "/login.txt"
             val file = File(filePath)
             val fileReader = FileReader(file)
 
-            var woong = fileReader.readText()
-            if(woong.isEmpty()) {
+            var loginInfo = fileReader.readText()
+            if(loginInfo.isEmpty()) {
                 println("No data")
             }
             else{
-                var temp = woong.split(" ")
+                var temp = loginInfo.split(" ")
                 doLogin(temp[0], temp[1])
             }
         }catch (e:Exception){
-            println("error")
         }
 
 
@@ -82,7 +80,7 @@ class LoginActivity : AppCompatActivity() {
                     user.setData(userId = json["id"].toString(), userName = json["userName"].toString(),Type= json["Type"].toString(), password = json["password"].toString(), userPhone = json["userPhone"].toString(), isRented = json["isRented"].toString())
 
                     if(autoLogin.isChecked){
-                        var filePath = filesDir.path + "/myText.txt"
+                        var filePath = filesDir.path + "/login.txt"
                         val file = File(filePath)
                         val fileWriter = FileWriter(file, false)
                         var loginInfo = id + " " + pwd
