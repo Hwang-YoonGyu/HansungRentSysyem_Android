@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
             thread(start = true) {
                 try {
                     var urlText =
-                        "http://223.194.158.173:8080/API/showLog?userId="+user.userId
+                        "http://10.0.2.2:8080/API/showLog?userId="+user.userId
 
                     val url = URL(urlText)
                     val netConn = url.openConnection() as HttpURLConnection

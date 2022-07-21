@@ -31,6 +31,7 @@ class LoginActivity : AppCompatActivity() {
 
             val file = File(filePath)
             val fileReader = FileReader(file)
+
             var woong = fileReader.readText()
             if(woong.isEmpty()) {
                 println("No data")
@@ -56,7 +57,7 @@ class LoginActivity : AppCompatActivity() {
         thread(start = true) {
             try {
                 val autoLogin = findViewById<CheckBox>(R.id.checkBox)
-                var urlText = "http://223.194.158.173:8080/API/login?userId="+id+"&password="+pwd
+                var urlText = "http://10.0.2.2:8080/API/login?userId="+id+"&password="+pwd
 
                 val url = URL(urlText)
                 val netConn = url.openConnection() as HttpURLConnection

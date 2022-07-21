@@ -56,7 +56,7 @@ class DetailActivity : AppCompatActivity() {
             thread(start = true) {
                 try {
                     var urlText =
-                        "http://223.194.158.173:8080/API/Rent?code="+obj.code+
+                        "http://10.0.2.2:8080/API/Rent?code="+obj.code+
                                 "&userId="+user.userId+
                                 "&userPhone="+user.userPhone+
                                 "&rentDate="+rentDate.text+
