@@ -59,6 +59,7 @@ class RentActivity : AppCompatActivity() {
         val layoutManager = LinearLayoutManager(this)
         recyclerview.layoutManager = layoutManager
         recyclerview.adapter = adapter
+        recyclerview.startLayoutAnimation();
 
         val back = findViewById<TextView>(R.id.rent_backBtn)
         back.setOnClickListener {
