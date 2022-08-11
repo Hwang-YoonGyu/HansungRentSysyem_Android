@@ -49,7 +49,7 @@ class RentActivity : AppCompatActivity() {
         super.onResume()
         adapter?.notifyDataSetChanged()
     }
-    
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rent)
@@ -59,7 +59,6 @@ class RentActivity : AppCompatActivity() {
         val layoutManager = LinearLayoutManager(this)
         recyclerview.layoutManager = layoutManager
         recyclerview.adapter = adapter
-        recyclerview.startLayoutAnimation();
 
         val back = findViewById<TextView>(R.id.rent_backBtn)
         back.setOnClickListener {
