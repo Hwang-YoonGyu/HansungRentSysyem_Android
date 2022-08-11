@@ -25,6 +25,8 @@
         <activity android:name=".RentActivity" android:exported="true"></activity>
         <activity android:name=".DetailActivity" android:exported="true"></activity>
         <activity android:name=".LogActivity" android:exported="true"></activity>
+        <activity android:name=".NoticeActivity" android:exported="true"></activity>
+        <activity android:name=".listActivity" android:exported="true"></activity>
 
 
     </application>

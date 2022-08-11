@@ -4,7 +4,6 @@ import android.app.AlertDialog
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
-import android.provider.ContactsContract.CommonDataKinds.Website.URL
 
 import android.widget.Button
 import android.widget.TextView
@@ -25,13 +24,24 @@ class MainActivity : AppCompatActivity() {
 
         val viewBtn = findViewById<Button>(R.id.viewBtn)
         val logBtn = findViewById<Button>(R.id.logBtn)
-        val terminateBtn = findViewById<Button>(R.id.terminateBtn)
+        val noticeBtn = findViewById<Button>(R.id.noticeBtn)
+        val logout = findViewById<TextView>(R.id.logout)
+        val notelistBtn = findViewById<Button>(R.id.notelistBtn)
         var userInfo = findViewById<TextView>(R.id.userInfo)
         userInfo.text = user.userId + " " +user.userName
         viewBtn.setOnClickListener {
             val intent = Intent(this, AskActivity::class.java)
             startActivity(intent)
         }
+        noticeBtn.setOnClickListener {
+            val intent = Intent(this, NoticeActivity::class.java)
+            startActivity(intent)
+        }
+        notelistBtn.setOnClickListener{
+            val intent =Intent(this,listActivity::class.java)
+            startActivity(intent)
+        }
+
         logBtn.setOnClickListener {
             thread(start = true) {
                 try {
@@ -86,7 +96,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-        terminateBtn.setOnClickListener{
+        logout.setOnClickListener{
             onBackPressed()
         }
     }
