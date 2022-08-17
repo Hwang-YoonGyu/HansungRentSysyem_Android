@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         notelistBtn.setOnClickListener{
-            val intent =Intent(this,listActivity::class.java)
+            val intent =Intent(this,DataActivity::class.java)
             startActivity(intent)
         }
 
