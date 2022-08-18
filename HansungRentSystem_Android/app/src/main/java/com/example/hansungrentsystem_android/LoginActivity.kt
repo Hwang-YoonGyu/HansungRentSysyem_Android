@@ -1,6 +1,8 @@
 package com.example.hansungrentsystem_android
 
 import android.app.AlertDialog
+import android.content.ClipboardManager
+import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +10,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
+import com.google.firebase.messaging.FirebaseMessaging
 import org.json.JSONObject
 import java.io.*
 import java.lang.StringBuilder
@@ -22,6 +25,22 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        var token = "";
+        FirebaseMessaging.getInstance().token.addOnCompleteListener { // it: Task<String!>
+            if (it.isSuccessful) {
+                System.out.println(it.result)
+                token = it.result.toString()
+            }
+            else
+                "Token Error!"
+            val clipboard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+            //val clip = ClipData.newPlainText("FCM Token", binding.textFCMToken.text)
+            //clipboard.setPrimaryClip(clip)
+// write to logcat
+            //Logging.d(MyFirebaseMessagingService.TAG, "FCM token: ${binding.textFCMToken.text}")
+        }
+
+        System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"+token)
         val loginBtn = findViewById<Button>(R.id.loginBtn)
         val idField = findViewById<EditText>(R.id.idField)
         val pwdField = findViewById<EditText>(R.id.pwdField)

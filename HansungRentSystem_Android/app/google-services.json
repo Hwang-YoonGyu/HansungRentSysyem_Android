@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "846372263330",
+    "project_id": "hansungrentsystem-73c03",
+    "storage_bucket": "hansungrentsystem-73c03.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:846372263330:android:a6dd4c5f3fd8bcfc1b8efb",
+        "android_client_info": {
+          "package_name": "com.minsuishappy.hansungrentsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "846372263330-0a9g6oacuj3rsat3t4tl25fn9edrkb8b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBh2HBerzyDK0MaN3RtKCaM_7uXsnSlerI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "846372263330-0a9g6oacuj3rsat3t4tl25fn9edrkb8b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

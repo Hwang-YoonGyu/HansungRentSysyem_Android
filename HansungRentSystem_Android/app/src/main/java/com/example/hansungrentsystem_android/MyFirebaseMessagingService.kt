@@ -1,9 +1,7 @@
 package com.example.hansungrentsystem_android
 
 
-import android.util.Log.d
 import com.google.android.datatransport.runtime.logging.Logging
-import com.google.android.datatransport.runtime.logging.Logging.d
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 
