@@ -55,7 +55,7 @@ class LoginActivity : AppCompatActivity() {
         thread(start = true) {
             try {
                 val autoLogin = findViewById<CheckBox>(R.id.checkBox)
-                var urlText = "http://10.0.2.2:8080/API/login?userId="+id+"&password="+pwd
+                var urlText = "http://13.125.253.41:8080/API/login?userId="+id+"&password="+pwd
 
                 val url = URL(urlText)
                 val netConn = url.openConnection() as HttpURLConnection

@@ -15,9 +15,10 @@
         <entry key="app/src/main/res/layout/activity_ask.xml" value="0.37907608695652173" />
         <entry key="app/src/main/res/layout/activity_detail.xml" value="0.5980992192807405" />
         <entry key="app/src/main/res/layout/activity_log.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.7152455586506181" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.3126281738281249" />
+        <entry key="app/src/main/res/layout/activity_mackbookpro.xml" value="0.16944444444444445" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.37907608695652173" />
-        <entry key="app/src/main/res/layout/activity_notebooklist.xml" value="0.4021743774414063" />
+        <entry key="app/src/main/res/layout/activity_notebooklist.xml" value="0.47241821289062513" />
         <entry key="app/src/main/res/layout/activity_noti.xml" value="0.5186440677966102" />
         <entry key="app/src/main/res/layout/activity_rent.xml" value="0.37907608695652173" />
         <entry key="app/src/main/res/layout/cex.xml" value="0.32608695652173914" />
@@ -37,7 +38,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.3599105834960938" />
+        <option name="scale" value="0.3126281738281249" />
       </ProjectState>
     </option>
   </component>
