@@ -10,6 +10,8 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.FirebaseApp
 import com.google.firebase.messaging.FirebaseMessaging
 import org.json.JSONObject
 import java.io.*
@@ -24,22 +26,22 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        var token = "";
-        FirebaseMessaging.getInstance().token.addOnCompleteListener { // it: Task<String!>
-            if (it.isSuccessful) {
-                System.out.println(it.result)
-                token = it.result.toString()
-            }
-            else
-                "Token Error!"
-            val clipboard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-            //val clip = ClipData.newPlainText("FCM Token", binding.textFCMToken.text)
-            //clipboard.setPrimaryClip(clip)
-// write to logcat
-            //Logging.d(MyFirebaseMessagingService.TAG, "FCM token: ${binding.textFCMToken.text}")
-        }
+        FirebaseApp.initializeApp(this)
 
-        System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"+token)
+
+
+        var token = "";
+        FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener {  task ->
+            if (!task.isSuccessful) {
+                System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@fail")
+                return@OnCompleteListener
+            }
+            val token = task.result
+
+            System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"+token)
+
+        })
+
         val loginBtn = findViewById<Button>(R.id.loginBtn)
         val idField = findViewById<EditText>(R.id.idField)
         val pwdField = findViewById<EditText>(R.id.pwdField)
@@ -128,4 +130,5 @@ class LoginActivity : AppCompatActivity() {
 
         }
     }
+
 }
