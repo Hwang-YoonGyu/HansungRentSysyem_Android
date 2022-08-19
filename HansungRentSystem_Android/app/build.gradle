@@ -1,14 +1,15 @@
 plugins {
-    id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-android-extensions'
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
 }
 
 android {
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.hansungrentsystem_android"
+        applicationId "com.minsuishappy.hansungrentsystem"
         minSdk 30
         targetSdk 33
         versionCode 1
@@ -50,7 +51,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     implementation 'com.google.firebase:firebase-messaging:21.1.0'
-    implementation platform('com.google.firebase:firebase-bom:25.12.0')
+    implementation platform('com.google.firebase:firebase-bom:30.3.2')
     implementation 'com.google.firebase:firebase-messaging-ktx'
     implementation 'com.google.firebase:firebase-analytics-ktx'
 
