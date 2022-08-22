@@ -10,6 +10,7 @@ class User private constructor() {
     var password : String = ""
     var userPhone : String = ""
     var isRented : String = ""
+    var token : String = ""
 
     // 파라메터를 받는 싱글톤 클래스를 만들려면 companion object를 이용한다.
     companion object {
@@ -34,6 +35,9 @@ class User private constructor() {
         this.password = password
         this.userPhone = userPhone
         this.isRented = isRented
+    }
+    fun setFbToken(token : String) {
+        this.token = token
     }
 }
 

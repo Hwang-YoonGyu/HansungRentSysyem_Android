@@ -39,6 +39,7 @@ class LoginActivity : AppCompatActivity() {
             val token = task.result
 
             System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"+token)
+            User.getInstance(this).setFbToken(token)
 
         })
 
@@ -127,6 +128,8 @@ class LoginActivity : AppCompatActivity() {
                 }
 
             }
+
+
 
         }
     }

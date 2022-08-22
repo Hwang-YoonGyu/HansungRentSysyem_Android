@@ -6,10 +6,13 @@ import android.content.Intent
 import android.os.Bundle
 
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import org.json.JSONObject
 import java.io.BufferedReader
+import java.io.File
+import java.io.FileWriter
 import java.io.InputStreamReader
 import java.net.HttpURLConnection
 import java.net.URL
@@ -21,6 +24,43 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        thread(start = true) {
+            try {
+                var urlText = "http://13.125.253.41:8080/API/fcm/set?userId=" + User.getInstance(this).userId + "&token=" + User.getInstance(this).token + "&password=" + User.getInstance(this).password
+
+                val url = URL(urlText)
+                val netConn = url.openConnection() as HttpURLConnection
+
+                if (netConn.responseCode == HttpURLConnection.HTTP_OK) {
+                    val streamReader = InputStreamReader(netConn.inputStream)
+                    val buffered = BufferedReader(streamReader)
+
+                    val content = java.lang.StringBuilder()
+                    while (true) {
+                        val line = buffered.readLine() ?: break
+                        content.append(line)
+                    }
+                    buffered.close()
+                    netConn.disconnect()
+                    System.out.println(content.toString());
+                }
+
+            } catch (e: Exception) {
+                this.runOnUiThread {
+                    System.out.println("오류 : " + e.toString());
+                    val builder = AlertDialog.Builder(this)
+                    builder.setTitle("").setMessage("API 서버 오류로 토큰을 전송하지 못했습니다.")
+                        .setPositiveButton("확인", { _: DialogInterface, i: Int ->
+                        })
+                    val alertDialog: AlertDialog = builder.create()
+                    alertDialog.show()
+                }
+
+            }
+        }
+
+
 
         val viewBtn = findViewById<Button>(R.id.viewBtn)
         val logBtn = findViewById<Button>(R.id.logBtn)
