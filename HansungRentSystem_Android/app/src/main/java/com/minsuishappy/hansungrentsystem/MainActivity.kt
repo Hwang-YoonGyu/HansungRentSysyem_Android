@@ -27,8 +27,8 @@ class MainActivity : AppCompatActivity() {
 
         thread(start = true) {
             try {
-                var urlText = "http://13.125.253.41:8080/API/fcm/set?userId=" + User.getInstance(this).userId + "&token=" + User.getInstance(this).token + "&password=" + User.getInstance(this).password
-
+                var urlText = "http://10.0.2.2:8080/API/fcm/set?userId=" +user.userId + "&password=" + user.password + "&token=" + user.token
+                System.out.println(urlText)
                 val url = URL(urlText)
                 val netConn = url.openConnection() as HttpURLConnection
 
@@ -44,6 +44,10 @@ class MainActivity : AppCompatActivity() {
                     buffered.close()
                     netConn.disconnect()
                     System.out.println(content.toString());
+                }
+                else {
+                    System.out.println(netConn.responseCode);
+
                 }
 
             } catch (e: Exception) {
