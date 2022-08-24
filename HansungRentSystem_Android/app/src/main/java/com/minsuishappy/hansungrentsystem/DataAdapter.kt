@@ -7,27 +7,23 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.Toast
 import androidx.annotation.NonNull
 import androidx.core.content.ContextCompat
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.notebook_list.view.*
 
-class DataAdapter(private val items: ArrayList<Data>) :
-    RecyclerView.Adapter<DataAdapter.ViewHolder>() {
-    var lastPosition: Int = -1
+class DataAdapter(private val items: ArrayList<Data>) : RecyclerView.Adapter<DataAdapter.ViewHolder>() {
     var context: Context? = null
 
     class ViewHolder(v: View) : RecyclerView.ViewHolder(v) {
-        private var view: View = v
+        var view: View = v
         fun bind(listener: View.OnClickListener, item: Data) {
             view.img_title.setImageDrawable(item.img)
             view.txt_title.text = item.title
             view.txt_subtitle.text = item.sub
             val btn = view.findViewById<Button>(R.id.notebooklistBtn)
             btn.setOnClickListener(listener)
-            //view.setOnClickListener(listener)
         }
     }
 
@@ -50,10 +46,7 @@ class DataAdapter(private val items: ArrayList<Data>) :
             bind(listener, item)
             itemView.tag = item
         }
-
     }
 
-
     override fun getItemCount(): Int = items.size
-
 }
