@@ -86,7 +86,7 @@ class DetailActivity : AppCompatActivity() {
                                 rentActivity?.changeMethod(obj.code)
                                 user.isRented = "1"
                                 val builder = AlertDialog.Builder(this)
-                                builder.setTitle("").setMessage("대여가 완료되었습니다. 과 사무실을 방문해 주세요")
+                                builder.setTitle("").setMessage("대여신청이 완료되었습니다. \n승인여부를 곧 알림으로 알려드리겠습니다.")
                                     .setPositiveButton(
                                         "확인",
                                         { dialogInterface: DialogInterface, i: Int ->

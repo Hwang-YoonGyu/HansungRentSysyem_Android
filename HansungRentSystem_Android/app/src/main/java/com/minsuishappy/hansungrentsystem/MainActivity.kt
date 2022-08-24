@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
                 this.runOnUiThread {
                     System.out.println("오류 : " + e.toString());
                     val builder = AlertDialog.Builder(this)
-                    builder.setTitle("").setMessage("API 서버 오류로 토큰을 전송하지 못했습니다.")
+                    builder.setTitle("").setMessage("API서버 접속오류로 토큰을 전송하지 못했습니다.")
                         .setPositiveButton("확인", { _: DialogInterface, i: Int ->
                         })
                     val alertDialog: AlertDialog = builder.create()
