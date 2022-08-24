@@ -37,6 +37,7 @@
         <activity android:name="com.minsuishappy.hansungrentsystem.LogActivity" android:exported="true"></activity>
         <activity android:name="com.minsuishappy.hansungrentsystem.NoticeActivity" android:exported="true"></activity>
         <activity android:name="com.minsuishappy.hansungrentsystem.DataActivity" android:exported="true"></activity>
+        <activity android:name="com.minsuishappy.hansungrentsystem.NotebookDeActivity" android:exported="true"></activity>
 
 
     </application>

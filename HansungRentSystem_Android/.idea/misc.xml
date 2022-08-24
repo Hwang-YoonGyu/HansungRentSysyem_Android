@@ -3,13 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/hansung/Documents/GitHub/HansungRentSysyem_Android/HansungRentSystem_Android/app/src/main/res/layout/activity_ask.xml" value="0.20036264732547598" />
+        <entry key="..\:/Users/hansung/Documents/GitHub/HansungRentSysyem_Android/HansungRentSystem_Android/app/src/main/res/layout/activity_detail.xml" value="0.20036264732547598" />
+        <entry key="..\:/Users/hansung/Documents/GitHub/HansungRentSysyem_Android/HansungRentSystem_Android/app/src/main/res/layout/activity_login.xml" value="0.20036264732547598" />
         <entry key="..\:/Users/hansung/Documents/GitHub/HansungRentSysyem_Android/HansungRentSystem_Android/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/hansung/Documents/GitHub/HansungRentSysyem_Android/HansungRentSystem_Android/app/src/main/res/layout/activity_notebookdetail.xml" value="0.20036264732547598" />
         <entry key="..\:/Users/hansung/Documents/GitHub/HansungRentSysyem_Android/HansungRentSystem_Android/app/src/main/res/layout/activity_notebooklist.xml" value="0.20820863616930313" />
         <entry key="..\:/Users/hansung/Documents/GitHub/HansungRentSysyem_Android/HansungRentSystem_Android/app/src/main/res/layout/activity_noti.xml" value="0.264" />
         <entry key="..\:/Users/hansung/Documents/GitHub/HansungRentSysyem_Android/HansungRentSystem_Android/app/src/main/res/layout/activity_notice.xml" value="0.20820863616930313" />
         <entry key="..\:/Users/hansung/Documents/GitHub/HansungRentSysyem_Android/HansungRentSystem_Android/app/src/main/res/layout/activity_rent.xml" value="0.20820863616930313" />
         <entry key="..\:/Users/hansung/Documents/GitHub/HansungRentSysyem_Android/HansungRentSystem_Android/app/src/main/res/layout/item_list.xml" value="0.20820863616930313" />
         <entry key="..\:/Users/hansung/Documents/GitHub/HansungRentSysyem_Android/HansungRentSystem_Android/app/src/main/res/layout/item_log.xml" value="0.20820863616930313" />
+        <entry key="..\:/Users/hansung/Documents/GitHub/HansungRentSysyem_Android/HansungRentSystem_Android/app/src/main/res/layout/notebook_list.xml" value="0.20036264732547598" />
         <entry key="app/src/main/res/drawable/round_button.xml" value="0.2025" />
         <entry key="app/src/main/res/drawable/round_button2.xml" value="0.2025" />
         <entry key="app/src/main/res/layout/activity_ask.xml" value="0.37907608695652173" />

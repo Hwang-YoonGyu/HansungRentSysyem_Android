@@ -81,7 +81,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, NoticeActivity::class.java)
             startActivity(intent)
         }
-        notelistBtn.setOnClickListener{
+        notelistBtn.setOnClickListener {
             val intent =Intent(this, DataActivity::class.java)
             startActivity(intent)
         }
