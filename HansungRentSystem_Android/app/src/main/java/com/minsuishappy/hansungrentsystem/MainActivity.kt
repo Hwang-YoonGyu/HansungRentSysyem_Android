@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
         thread(start = true) {
             try {
-                var urlText = "http://10.0.2.2:8080/API/fcm/set?userId=" +user.userId + "&password=" + user.password + "&token=" + user.token
+                var urlText = "http://13.125.253.41:8080/API/fcm/set?userId=" +user.userId + "&password=" + user.password + "&token=" + user.token
                 System.out.println(urlText)
                 val url = URL(urlText)
                 val netConn = url.openConnection() as HttpURLConnection
