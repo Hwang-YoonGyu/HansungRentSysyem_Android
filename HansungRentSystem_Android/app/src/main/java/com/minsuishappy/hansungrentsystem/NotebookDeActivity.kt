@@ -14,6 +14,11 @@ class NotebookDeActivity : AppCompatActivity()  {
 
         findViewById<TextView>(R.id.notebookName).text = intent.getStringExtra ("name")
         findViewById<TextView>(R.id.notebookCode).text = intent.getStringExtra ("code")
+        findViewById<TextView>(R.id.notebookCpu).text = intent.getStringExtra ("cpu")
+        findViewById<TextView>(R.id.notebookMemory).text = intent.getStringExtra ("memo")
+        findViewById<TextView>(R.id.notebookCard).text = intent.getStringExtra ("card")
+        findViewById<TextView>(R.id.notebookScreen).text = intent.getStringExtra ("screen")
+        findViewById<TextView>(R.id.notebookWeight).text = intent.getStringExtra ("weight")
         when (intent.getStringExtra("name")) {
             "MacBook Pro" -> findViewById<ImageView>(R.id.notebookImg).setImageDrawable(getDrawable(R.drawable.macbookpro))
             "MacBook Air" -> findViewById<ImageView>(R.id.notebookImg).setImageDrawable(getDrawable(R.drawable.macbookair))

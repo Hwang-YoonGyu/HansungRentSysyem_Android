@@ -43,6 +43,11 @@ class DataAdapter(private val items: ArrayList<LabtopData>) : RecyclerView.Adapt
 
             intent.putExtra("name", item.name)
             intent.putExtra("code", item.code)
+            intent.putExtra("cpu", item.cpu)
+            intent.putExtra("memo", item.memo)
+            intent.putExtra("card", item.card)
+            intent.putExtra("screen", item.screen)
+            intent.putExtra("weight", item.weight)
             startActivity(holder.itemView.context, intent, null)
         }
         holder.apply {
