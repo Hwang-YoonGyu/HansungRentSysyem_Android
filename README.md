@@ -1,6 +1,6 @@
 # 한성대학교 기가재 대여 통합 시스템 Android앱  
 HansungRentSystem_Android
-Made by 황윤규, 조진웅, 유지연  
+Made by 황윤규, 조진웅, 유지연 ,이찬호
 
 #사용스택  
 Android Studio  
