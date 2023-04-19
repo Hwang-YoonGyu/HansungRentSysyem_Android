@@ -107,7 +107,6 @@ class MainActivity : AppCompatActivity() {
                         buffered.close()
                         netConn.disconnect()
 
-
                         val json = JSONObject(content.toString())
                         val data = json.getJSONArray("Data")
 
